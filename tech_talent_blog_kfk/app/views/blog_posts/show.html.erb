@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= @blog_post.title %>
+  </div>
+<div class="panel-body">
+<p>by <%= @blog_post.author %></p>
+<p><%= @blog_post.blog_entry %></p>
+</div>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    Make A Comment
+  </div>
+  <div class="panel-body">
+    <%= render 'comments/form' %>
+  </div>
+</div>
+
+<div>
+  <%= link_to 'Edit Post', edit_blog_post_path(@blog_post) %>
+  <%= link_to 'Back', blog_posts_path %>
+</div>

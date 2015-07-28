@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Course Details</h3>
+  </div>
+  <div class="panel-body">
+  <div>
+    <dl class="dl-horizontal">
+      <dt>Number:</dt>
+      <dd><%= @course.number %></dd>
+      <dt>Title:</dt>
+      <dd><%= @course.title %></dd>
+      <dt>Credits:</dt>
+      <dd><%= @course.credits %></dd>
+      <dt>Department:</dt>
+      <dd><%= @course.department.name %></dd>
+    </dl>
+  </div>
+  </div>
+  <div class="panel-footer">
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+  <%= link_to 'Back', courses_path %>
+  </div>
+</div>

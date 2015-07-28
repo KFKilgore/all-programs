@@ -1,0 +1,41 @@
+<h1>Planets</h1>
+
+<table>
+    <tbody>
+        <tr>
+            <th>name</th>
+            <th>diameter</th>
+            <th>rotation_period</th>
+            <th>orbital_period</th>
+            <th>gravity</th>
+            <th>population</th>
+            <th>climate</th>
+            <th>terrain</th>
+            <th>surface_water</th>
+           <!-- <th>residents</th>
+            <th>films</th>  -->
+        </tr>
+        
+        <% @results.each do |planet| %>
+        
+        <tr>
+            <td> <%= planet["name"] %> </td>
+            <td> <%= planet["diameter"] %> </td>
+            <td> <%= planet["rotation_period"] %> </td>
+            <td> <%= planet["orbital_period"] %> </td>
+            <td> <%= planet["gravity"] %> </td>
+            <td> <%= planet["population"] %> </td>
+            <td> <%= planet["climate"] %> </td>
+            <td> <%= planet["terrain"] %> </td>
+            <td> <%= planet["surface_water"] %> </td>
+            <!-- <td> <%= planet["residents"] %> </td>
+            <td> <%= planet["films"] %> </td>  -->
+        </tr>
+        
+        <% end %>
+        
+    </tbody>
+</table>
+
+
+<a href="https://project-2015-07-13-kfkilgore.c9.io/pages/home">Return to Homepage</a>

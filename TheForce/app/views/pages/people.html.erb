@@ -1,0 +1,36 @@
+<h1>Characters</h1>
+<p>There is a table in the app/views/pages/people.html.erb file that gets the description of each character.</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>name</th>
+            <th>height</th>
+            <th>mass</th>
+            <th>hair color</th>
+            <th>skin color</th>
+            <th>eye color</th>
+            <th>birth year</th>
+            <th>gender</th>
+        </tr>
+        
+        <% @results.each do |person| %>
+        
+        <tr>
+            <td> <%= person["name"] %> </td>
+            <td> <%= person["height"] %> </td>
+            <td> <%= person["mass"] %> </td>
+            <td> <%= person["hair_color"] %> </td>
+            <td> <%= person["skin_color"] %> </td>
+            <td> <%= person["eye_color"] %> </td>
+            <td> <%= person["birth_year"] %> </td>
+            <td> <%= person["gender"] %> </td>
+        </tr>
+        
+        <% end %>
+        
+    </tbody>
+</table>
+
+
+<a href="https://project-2015-07-13-kfkilgore.c9.io/pages/home">Return to Homepage</a>

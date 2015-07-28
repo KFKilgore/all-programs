@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Department Details</h3>
+  </div>
+  <div class="panel-body">
+  <div>
+    <dl class="dl-horizontal">
+      <dt>Department:</dt>
+      <dd><%= @department.name %></dd>
+      <dt>Budget:</dt>
+      <dd><%= @department.budget %></dd>
+      <dt>Start Date:</dt>
+      <dd><%= @department.start_date %></dd>
+      <dt>Instructor:</dt>
+      <dd><%= @department.instructor.last_name%>, <%= @department.instructor.first_name %></dd>
+    </dl>
+  </div>
+
+<%= link_to 'Edit', edit_department_path(@department) %> |
+<%= link_to 'Back', departments_path %>

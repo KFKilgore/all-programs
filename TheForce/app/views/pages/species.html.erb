@@ -1,0 +1,38 @@
+<h1>Species</h1>
+<p>A species resource is a type of species or character within the Star Wars Universe.</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>name</th>
+            <th>height</th>
+            <th>lifespan</th>
+            <th>hair colors</th>
+            <th>skin colors</th>
+            <th>eye colors</th>
+           <!-- <th>homeworld</th>
+            <th>people</th>
+            <th>films</th> -->
+        </tr>
+        
+        <% @results.each do |species| %>
+        
+        <tr>
+            <td> <%= species["name"] %> </td>
+            <td> <%= species["average_height"] %> </td>
+            <td> <%= species["average_lifespan"] %> </td>
+            <td> <%= species["hair_colors"] %> </td>
+            <td> <%= species["skin_colors"] %> </td>
+            <td> <%= species["eye_colors"] %> </td>
+         <!--   <td> <%= species["homeworld"] %> </td>
+            <td> <%= species["people"] %> </td>
+            <td> <%= species["films"] %> </td> -->
+        </tr>
+        
+        <% end %>
+        
+    </tbody>
+</table>
+
+
+<a href="https://project-2015-07-13-kfkilgore.c9.io/pages/home">Return to Homepage</a>

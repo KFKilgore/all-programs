@@ -1,0 +1,34 @@
+body {
+    font-family: 'Inknut Antiqua', serif; 
+    background: #323232;
+}
+
+h1 {
+    font-size: 35px;
+    background: black;
+    color: white;
+}
+
+div p {
+    color: yellow;
+    font-size: 22px;
+}
+
+.class_test {
+    color: white;
+}
+
+#id_test {
+    font-family: Arial;
+    font-size: 14px;
+    color: purple;
+}
+
+.hover_test:hover {
+    font-size: 50px;
+}
+
+a :visited {
+    font-size: large;
+    background: white;
+}

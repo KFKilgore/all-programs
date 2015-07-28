@@ -1,0 +1,51 @@
+<h1>Films</h1>
+<p>There is a table in the app/views/pages/films.html.erb file to list films.</p>
+
+<table>
+    <tbody>
+        <tr>
+            <th>title</th>
+            <th>episode id</th>
+            <th>opening crawl</th>
+            <th>director</th>
+            <th>producer</th>
+            <th>release date</th>
+            <th>species</th>
+            <th>starships</th>
+            <th>vehicles</th>
+            <th>characters</th>
+            <th>planets</th>
+        </tr>
+        
+        <% @results.each do |film| %>
+        
+        <tr>
+            <td> <%= film["title"] %> </td>
+            <td> <%= film["episode_id"] %> </td>
+            <td> <%= film["opening_crawl"] %> </td>
+            <td> <%= film["director"] %> </td>
+            <td> <%= film["producer"] %> </td>
+            <td> <%= film["release_date"] %> </td>
+            <td> <%= film["species"].each do |species| %> </td>
+                <%= JSON.parse(open(species).read) ["name"] %>
+                <% end %>
+            <td> <%= film["starships"].each do |starships| %> </td>
+                <%= JSON.parse(open(starships).read) ["name"] %>
+                <% end %>
+            <td> <%= film["vehicles"].each do |vehicles| %> </td> %> </td>
+                <%= JSON.parse(open(vehicles).read) ["name"] %>
+                <% end %>
+            <td> <%= film["characters"] %>.each do |characters| %> </td>
+                <%= JSON.parse(open(characters).read) ["name"] %>
+                <% end %>
+            <td> <%= film["planets"].each do |planets| %> </td>
+                <%= JSON.parse(open(planets).read) ["name"] %>
+                <% end %>
+        </tr>
+        
+        <% end %>
+        
+    </tbody>
+</table>
+
+<a href="https://project-2015-07-13-kfkilgore.c9.io/pages/home">Return to Homepage</a>
