@@ -11,16 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
+
+  <div class="form-group">
+    <%= f.text_area :comment_entry, class: "form-control", :rows => 5, placeholder: "Tell Me What You Think" %>
   </div>
-  <div class="field">
-    <%= f.label :comment_entry %><br>
-    <%= f.text_area :comment_entry %>
-  </div>
-  <div class="field cant-see-me">
+  <div class="form-group cant-see-me">
     <%= f.number_field :blog_post_id, value: @blog_post.id %>
+    <%= f.number_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">
     <%= f.submit %>

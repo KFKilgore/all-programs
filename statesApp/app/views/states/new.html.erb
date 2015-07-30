@@ -1,0 +1,17 @@
+<h1>Name a State</h1>
+
+<p>Please name a state within the USofA.</p>
+
+<div>
+    <%= @message %>
+</div>
+<br />
+
+<%= render 'form' %>
+
+<% @states.each do |state| %>
+<%= "#{state.id}. #{state.name}" %>
+<br />
+<% end %>
+
+<%= link_to 'Back', states_path %>

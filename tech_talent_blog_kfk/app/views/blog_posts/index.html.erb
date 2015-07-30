@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Current Blog Posts</h1>
 
 <div class="row">
@@ -10,20 +8,21 @@
           <%= link_to blog_post.title, blog_post %>
     </div>
     <div class="panel-body">
-      by <%= blog_post.author %><br />
+      by <%= link_to blog_post.user.name, user_posts_path(id: blog_post.user.id) %> at <%= blog_post.created_at.strftime('%m/%d/%Y %I:%M:%S %p') %>
+      <br />
       <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "Read More", blog_post %>]</p>
     </div>
     <div class="panel-footer">
-      <!--removing the equals sign after the karet percent sign makes what follows hidden-->
-      <% link_to 'Show', blog_post, class: "btn btnl-primary" %>
-      <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-warning" %>
+      <% if signed_in? %>
+      <% if current_user.id ==blog_post.user.id %>
+      <!--
+      removing the equals sign after the karet percent sign makes what follows hidden
+      <% link_to 'Show', blog_post, class: "btn btn-primary" %> 
+      -->
+      <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-teal" %>
       <%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      <% end %>
+      <% end %>
     </div>
   </div>
-</div>
 <% end %>
-</div>
-
-<br>
-
-<%= link_to 'New Blog post', new_blog_post_path %>
